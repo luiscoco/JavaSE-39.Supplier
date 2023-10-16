@@ -121,11 +121,11 @@ It's a versatile interface that can be applied in different scenarios where defe
 
 Let's delve into more advanced topics related to Supplier in Java:
 
-## Method References:
-Instead of using lambda expressions, you can leverage method references when working with Supplier. For example:
+## Method References
 
-java
-Copy code
+Instead of using lambda expressions, you can leverage method references when working with Supplier.
+
+```java
 import java.util.function.Supplier;
 
 public class MethodReferenceExample {
@@ -138,13 +138,15 @@ public class MethodReferenceExample {
         System.out.println(supplier.get());
     }
 }
+```
+
 Here, MethodReferenceExample::generateString refers to the static method generateString in the class.
 
-Chaining Suppliers:
+## Chaining Suppliers
+
 You can chain multiple Supplier instances using the andThen method. It allows you to create a pipeline of operations:
 
-java
-Copy code
+```java
 import java.util.function.Supplier;
 
 public class ChainingSuppliers {
@@ -157,13 +159,16 @@ public class ChainingSuppliers {
         System.out.println(chainedSupplier.get()); // Outputs: Hello World
     }
 }
+```
+
 The chainedSupplier will first get the result from firstSupplier and then apply secondSupplier to the result.
 
-Memoization:
-Memoization is a technique where you cache the result of a costly operation and return the cached result when the same inputs occur again. You can implement memoization using a Supplier:
+## Memoization
+Memoization is a technique where you cache the result of a costly operation and return the cached result when the same inputs occur again. 
 
-java
-Copy code
+You can implement memoization using a Supplier:
+
+```java
 import java.util.function.Supplier;
 
 public class MemoizationExample {
@@ -190,6 +195,8 @@ public class MemoizationExample {
         System.out.println("Result: " + memoizationExample.getResult()); // Returns the cached result
     }
 }
+```
+
 In this example, the expensive computation is performed only once, and subsequent calls return the cached result.
 
 These advanced topics showcase the flexibility and power of the Supplier interface in Java, from method references to creating complex pipelines and implementing optimization techniques like memoization.
