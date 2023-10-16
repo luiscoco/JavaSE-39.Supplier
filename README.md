@@ -6,10 +6,7 @@ It represents a supplier of results, meaning it doesn't take any arguments but p
 
 The result is obtained by calling the get() method.
 
-Here's a simple example:
-
-java
-Copy code
+```java
 import java.util.function.Supplier;
 
 public class SupplierExample {
@@ -28,26 +25,26 @@ public class SupplierExample {
         System.out.println(supplier2.get());
     }
 }
-In this example, Supplier is a generic interface, and you specify the type of result it will supply (in this case, String). The get() method is called on the supplier object to obtain the result.
+```
 
-In the second example, a lambda expression is used to create a more concise representation of the Supplier. The lambda expression () -> "Hello, Lambda Supplier!" is equivalent to the anonymous class in the first example.
+In this example, Supplier is a generic interface, and you specify the type of result it will supply (in this case, String). 
+
+The get() method is called on the supplier object to obtain the result.
+
+In the second example, a lambda expression is used to create a more concise representation of the Supplier. 
+
+The lambda expression () -> "Hello, Lambda Supplier!" is equivalent to the anonymous class in the first example.
 
 In both cases, when you call get() on the Supplier, it produces the specified result.
 
 It's commonly used in scenarios where you need to defer the computation of a value, especially when the computation might be expensive, and you only want to perform it when necessary.
 
 
+# More examples to showcase the use of java.util.function.Supplier:
 
+## Random Number Generator:
 
-User
-can you give me more samples
-ChatGPT
-Certainly! Here are a few more examples to showcase the use of java.util.function.Supplier:
-
-Random Number Generator:
-
-java
-Copy code
+```java
 import java.util.Random;
 import java.util.function.Supplier;
 
@@ -57,10 +54,11 @@ public class RandomNumberGenerator {
         System.out.println("Random Number: " + randomIntegerSupplier.get());
     }
 }
-Date Supplier:
+```
 
-java
-Copy code
+## Date Supplier:
+
+```java
 import java.time.LocalDateTime;
 import java.util.function.Supplier;
 
@@ -70,10 +68,11 @@ public class DateSupplier {
         System.out.println("Current Date and Time: " + currentDateTimeSupplier.get());
     }
 }
-Default Value Supplier:
+```
 
-java
-Copy code
+## Default Value Supplier:
+
+```java
 import java.util.function.Supplier;
 
 public class DefaultValueSupplier {
@@ -89,10 +88,11 @@ public class DefaultValueSupplier {
         System.out.println("Value: " + defaultValueSupplier.get());
     }
 }
-Lazy Initialization:
+```
 
-java
-Copy code
+## Lazy Initialization:
+
+```java
 import java.util.function.Supplier;
 
 public class LazyInitialization {
@@ -111,17 +111,17 @@ public class LazyInitialization {
         System.out.println("Value: " + lazyObject.getValue());
     }
 }
-These examples illustrate various use cases for Supplier, from generating random numbers to lazy initialization of values. It's a versatile interface that can be applied in different scenarios where deferred or lazy evaluation is beneficial.
+```
 
+These examples illustrate various use cases for Supplier, from generating random numbers to lazy initialization of values. 
 
+It's a versatile interface that can be applied in different scenarios where deferred or lazy evaluation is beneficial.
 
+# More advance topics about "Supplier" in Java
 
-User
-can you explain me more advance topics about "Supplier" in Java
-ChatGPT
-Certainly! Let's delve into more advanced topics related to Supplier in Java:
+Let's delve into more advanced topics related to Supplier in Java:
 
-Method References:
+## Method References:
 Instead of using lambda expressions, you can leverage method references when working with Supplier. For example:
 
 java
